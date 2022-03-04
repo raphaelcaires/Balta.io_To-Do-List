@@ -11,9 +11,8 @@ const App = () => {
         <Navbar />
         <br />
           <Routes>
-            <Route path="/" element={<TodoList />}>
-              <Route path="/create" element={<AddTodo />} />
-            </Route>
+            <Route path="/" element={<TodoList />} />
+            <Route path="/create" element={<AddTodo />} />
           </Routes>
       </div>
     </TodoContext>
