@@ -11,7 +11,6 @@ const App = () => {
         <Navbar />
         <br />
           <Routes>
-            <Route index element={<Navigate to="/" />} />
             <Route path="/" element={<TodoList />} />
             <Route path="/create" element={<AddTodo />} />
           </Routes>
