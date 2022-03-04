@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import AddTodo from 'components/AddTodo';
 import TodoList from 'components/TodoList';
 import TodoContext from './contexts/TodoContext';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
         <Navbar />
         <br />
           <Routes>
+            <Route index element={<Navigate to="/" />} />
             <Route path="/" element={<TodoList />} />
             <Route path="/create" element={<AddTodo />} />
           </Routes>
